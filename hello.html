@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- <h1>Hello World</h1> -->
+        <canvas width="600" height="600" id="main_Canvas"></canvas>
+
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.fillStyle = 'blue';
+            // context.fillRect(100,100,400,400);
+
+            context.lineWidth = 4;
+
+            context.beginPath();
+            context.rect(100,100,400,400);
+            context.stroke();
+
+            context.beginPath();
+            context.arc(300,300,100,0,Math.PI*2);
+            context.stroke();
+
+            let year = 2042;
+            let nextYear = year + 1;
+
+            let dinner = 'pasta';
+            let sentence = 'Dinner will be ' + dinner;
+
+            function saySomething(param) {
+                console.log(param);
+            }
+
+            saySomething(sentence);
+
+            function add(a, b) {
+                return a + b;
+            }
+
+            let result = add(10, 12);
+            console.log(result);
+
+            let multiply = (a, b) => {
+                return a * b;
+            }
+
+            console.log(multiply(10, 12));
+
+        </script>
+    </body>
+</html>
