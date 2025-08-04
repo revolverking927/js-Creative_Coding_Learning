@@ -48,10 +48,10 @@ const sketch = () => {
       context.translate(cx, cy);
       context.rotate(-newAngle);
 
-      context.lineWidth = random.range(1,15);
+      context.lineWidth = random.range(5,15);
 
       context.beginPath();
-      context.arc(0, 0, radius * random.range(.5,1.5), newAngle * random.range(1,-8), -newAngle * random.range(1,5));
+      context.arc(0, 0, radius * random.range(.1,1.5), newAngle * random.range(1,-8), -newAngle * random.range(1,5));
       context.stroke();
       context.restore();
     }
