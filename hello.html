@@ -4,6 +4,9 @@
         <link href="style.css" rel="stylesheet" />
     </head>
     <body>
+        <title>
+            Creative Coding js
+        </title>
         <!-- <h1>Hello World</h1> -->
         <canvas width="600" height="600" id="main_Canvas"></canvas>
 
@@ -18,12 +21,34 @@
 
             context.beginPath();
             context.rect(100,100,400,400);
-            context.stroke();
+            // context.stroke();
 
             context.beginPath();
             context.arc(300,300,100,0,Math.PI*2);
-            context.stroke();
+            // context.stroke();
 
+            const height = 60;
+            const width = 60;
+            const gap = 20;
+            let x, y;
+
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    
+                    x = 100 + (width + gap) * i;
+                    y = 100 + (height + gap) * j;
+
+                    context.beginPath();
+                    context.rect(x , y, width, height);
+                    context.stroke();
+
+                    if (Math.random() > 0.5) {
+                        context.beginPath();
+                        context.rect(x + 8, y + 8, width - 16, height - 16);
+                        context.stroke(); 
+                    }
+                }
+            }
             let year = 2042;
             let nextYear = year + 1;
 
@@ -48,7 +73,24 @@
             }
 
             console.log(multiply(10, 12));
+            
+            let years = [];
+            let nums = [1,2,3,4,5];
 
+            for (let i = 0; i < 10; i++) {
+                if (i == 5) {
+                    console.log('At the last pos');
+                    break;
+                }
+                console.log(nums[i]);
+                
+                years.push(i+i);
+            }
+
+            console.log('The list of years ' + years);
+            years.forEach(i => {
+                console.log(Math.PI*i);
+            })
         </script>
     </body>
 </html>
